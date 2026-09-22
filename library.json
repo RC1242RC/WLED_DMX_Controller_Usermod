@@ -1,5 +1,5 @@
 {
-  "name": "wled-usermod-example",
+  "name": "WLED_DMX_Controller_Usermod",
   "build": {
     "libArchive": false
   },

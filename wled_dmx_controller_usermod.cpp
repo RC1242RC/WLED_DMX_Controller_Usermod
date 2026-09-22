@@ -21,7 +21,7 @@
  */
 
 //class name. Use something descriptive and leave the ": public Usermod" part :)
-class MyExampleUsermod : public Usermod {
+class DMXControllerUsermod : public Usermod {
 
   private:
 
@@ -108,7 +108,8 @@ class MyExampleUsermod : public Usermod {
 
       // do your magic here
       if (millis() - lastTime > 1000) {
-        //Serial.println("I'm alive!");
+        Serial.print("Current preset: ");
+        Serial.println(currentPreset)
         lastTime = millis();
       }
     }
