@@ -109,7 +109,7 @@ class DMXControllerUsermod : public Usermod {
       // do your magic here
       if (millis() - lastTime > 1000) {
         Serial.print("Current preset: ");
-        Serial.println(currentPreset)
+        Serial.println(currentPreset);
         lastTime = millis();
       }
     }
@@ -368,5 +368,5 @@ void MyExampleUsermod::publishMqtt(const char* state, bool retain)
 #endif
 }
 
-static MyExampleUsermod example_usermod;
-REGISTER_USERMOD(example_usermod);
+static DMXControllerUsermod controller_usermod;
+REGISTER_USERMOD(controller_usermod);
