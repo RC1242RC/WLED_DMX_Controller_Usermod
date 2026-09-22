@@ -349,24 +349,24 @@ class DMXControllerUsermod : public Usermod {
 
 
 // add more strings here to reduce flash memory usage
-const char MyExampleUsermod::_name[]    PROGMEM = "ExampleUsermod";
-const char MyExampleUsermod::_enabled[] PROGMEM = "enabled";
+//const char MyExampleUsermod::_name[]    PROGMEM = "ExampleUsermod";
+//const char MyExampleUsermod::_enabled[] PROGMEM = "enabled";
 
 
 // implementation of non-inline member methods
 
-void MyExampleUsermod::publishMqtt(const char* state, bool retain)
-{
-#ifndef WLED_DISABLE_MQTT
+//void MyExampleUsermod::publishMqtt(const char* state, bool retain)
+//{
+//#ifndef WLED_DISABLE_MQTT
   //Check if MQTT Connected, otherwise it will crash the 8266
-  if (WLED_MQTT_CONNECTED) {
-    char subuf[64];
-    strcpy(subuf, mqttDeviceTopic);
-    strcat_P(subuf, PSTR("/example"));
-    mqtt->publish(subuf, 0, retain, state);
-  }
-#endif
-}
+//  if (WLED_MQTT_CONNECTED) {
+//    char subuf[64];
+//    strcpy(subuf, mqttDeviceTopic);
+//    strcat_P(subuf, PSTR("/example"));
+//    mqtt->publish(subuf, 0, retain, state);
+//  }
+//#endif
+//}
 
 static DMXControllerUsermod controller_usermod;
 REGISTER_USERMOD(controller_usermod);
